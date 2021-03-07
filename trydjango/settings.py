@@ -31,12 +31,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
+    'django.contrib.admin', # odpowiada za strone admina
+    'django.contrib.auth',  # odpowiada za tworzenie uzytkownikow
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # third party
+
+    # own
+    'pages',
+    'products', # podajesz nazwe apki, ktora chcesz dodac
 ]
 
 MIDDLEWARE = [
@@ -54,7 +60,8 @@ ROOT_URLCONF = 'trydjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+         # tutaj dodaje sie sciezke do wlasnych templatow:
+        'DIRS': [os.path.join(BASE_DIR, "templates")],  # laczy sciezke BASE_DIR ze siezka do templatow
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
