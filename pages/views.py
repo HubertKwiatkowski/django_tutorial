@@ -18,9 +18,10 @@ def social_view(request, *args, **kwargs):
 
 def about_view(request, *args, **kwargs):
 	my_context = {
-		"my_text": "This is about us",
+		"title": "this is about us",
 		"my_number": 123,
-		"my_list": [123, 556, 478, 312]
+		"my_list": [123, 556, 478, 312],
+		"my_html": "<h1>Hello There!!!</h1>"
 
 	}
 	return render(request, "about.html", my_context)
