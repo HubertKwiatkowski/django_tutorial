@@ -12,9 +12,9 @@ def product_create_view(request):
 		form.save()
 
 	context = {
-		'form': obj
+		'form': form
 	}
-	return render(request, "products/product_detail.html", context)
+	return render(request, "products/product_create.html", context)
 
 
 def product_detail_view(request):
